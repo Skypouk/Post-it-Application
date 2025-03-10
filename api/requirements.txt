@@ -1,0 +1,9 @@
+fastapi
+strawberry-graphql[fastapi]
+sqlalchemy
+asyncpg
+alembic
+uvicorn
+python-dotenv
+psycopg
+ruff
