@@ -19,12 +19,13 @@ const NoteCard = ({ note }) => {
 
     const [position, setPosition] = useState(note.position);
     const colors = note.colors;
-    const description = note.description;
+    const description = note.description ? JSON.parse(note.description) : "";
+
 
     const textAreaRef = useRef(null);
 
     const [updateNoteMutation] = useMutation(UPDATE_NOTE);
-    
+
     useEffect(() => {
         autoGrow(textAreaRef);
         setZIndex(cardRef.current);
@@ -101,7 +102,7 @@ const NoteCard = ({ note }) => {
                 left: `${position.x}px`,
                 top: `${position.y}px`,
                 backgroundColor: colors.colorBody,
-                
+
             }}
         >
             <div

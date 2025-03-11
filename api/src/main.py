@@ -4,7 +4,7 @@ from src.routers.note import graphql_app
 
 app = FastAPI(root_path="/api")
 
-origins = ["http://localhost:3000"]
+origins = ["http://localhost:3001"]
 
 app.add_middleware(
     CORSMiddleware,

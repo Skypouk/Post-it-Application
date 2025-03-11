@@ -4,11 +4,11 @@ from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
 from alembic import context
-from database import Base, engine
+from src.db import Base, engine
 
 import os
 from dotenv import load_dotenv
-load_dotenv() 
+load_dotenv()
 
 POSTGRES_USER = os.getenv('POSTGRES_USER')
 POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD')
@@ -65,14 +65,18 @@ def run_migrations_offline() -> None:
         context.run_migrations()
 
 
-async def run_migrations_online():
-    async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
+def run_migrations_online():
+    connectable = engine
 
+    with connectable.begin() as connection:
+        context.configure(connection=connection, target_metadata=target_metadata)
 
-import asyncio
+        with context.begin_transaction():
+            context.run_migrations()
+
 
 if context.is_offline_mode():
     run_migrations_offline()
 else:
-    asyncio.run(run_migrations_online())
+    run_migrations_online()
+
