@@ -3,8 +3,8 @@ export const setNewOffset = (card, mouseMoveDir = { x: 0, y: 0 }) => {
     const offsetTop = card.offsetTop - mouseMoveDir.y;
 
     return {
-        x: offsetLeft < 0 ? 0 : offsetLeft,
-        y: offsetTop < 0 ? 0 : offsetTop,
+        x: offsetLeft < 100 ? 100 : offsetLeft,
+        y: offsetTop < 80 ? 80 : offsetTop,
     };
 };
 
