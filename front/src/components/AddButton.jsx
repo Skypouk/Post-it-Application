@@ -10,7 +10,7 @@ import { useMutation } from "@apollo/client";
 
 const AddButton = () => {
     const { setNotes } = useContext(NotesContext);
-    const startingPos = useRef(10);
+    const startingPos = useRef(110);
     const [createNoteMutation] = useMutation(CREATE_NOTE);
 
     const addNote = async () => {
