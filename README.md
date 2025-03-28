@@ -43,3 +43,5 @@ With features like note color customization, auto-growing sizes, and auto-save, 
 
 Before diving into the code, check out how the app works in the video below!
 [Click here to watch the demo video](https://raw.githubusercontent.com/Skypouk/Post-it-Application/main/front/src/assets/postit_demo_video.mp4)
+
+![Overview](https://raw.githubusercontent.com/Skypouk/Post-it-Application/main/front/src/assets/postit_overview.png)
