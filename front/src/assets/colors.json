@@ -8,23 +8,30 @@
     },
     {
         "id": 2,
-        "colorName":"red",
-        "colorHeader":"#b16a66",
-        "colorBody":"#fd9891",
+        "colorName":"green",
+        "colorHeader":"#00c000",
+        "colorBody":"#4dd34d",
         "colorText":"#18181A"
     },
     {
         "id": 3,
-        "colorName":"blue",
-        "colorHeader":"#5c8db1",
-        "colorBody":"#83c9fd",
-        "colorText":"#18181A"
+        "colorName":"red",
+        "colorHeader":"#880808",
+        "colorBody":"#D2042D",
+        "colorText":"#E8E8E8"
     },
     {
         "id": 4,
-        "colorName":"green",
-        "colorHeader":"#00c000",
-        "colorBody":"#4dd34d",
+        "colorName":"orange",
+        "colorHeader":"#FF5F1F",
+        "colorBody":"#FF7F50",
+        "colorText":"#18181A"
+    },
+    {
+        "id": 5,
+        "colorName":"blue",
+        "colorHeader":"#5c8db1",
+        "colorBody":"#83c9fd",
         "colorText":"#18181A"
     }
 ]
